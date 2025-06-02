@@ -20,8 +20,16 @@ A simple web application that creates a shooting stars effect with your images.
 To add your own images:
 
 1. Place your images in the `public/img/` directory
-2. Add the image paths to the `images` array in `public/js/script.js`
+2. Update the `imagePath` variable in `public/js/script.js` to point to your image
 
 ## Deployment
 
-This site is deployed using GitHub Pages. The site is available at: https://damienDemontis.github.io/Shooting-Dom/ 
+This site is deployed using GitHub Pages. To set it up:
+
+1. Go to your repository settings on GitHub
+2. Scroll down to the "GitHub Pages" section
+3. Under "Source", select "Deploy from a branch"
+4. Under "Branch", select "master" and "/public" folder
+5. Click Save
+
+The site will then be available at: https://damienDemontis.github.io/Shooting-Dom/ 

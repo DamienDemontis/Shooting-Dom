@@ -7,7 +7,7 @@ document.getElementById('file-upload').onchange = function() {
 // pictures
 var picturesContainer = document.getElementById('pictures-container');
 var nbPictures = 6;
-var imagePath = (window.location.pathname !== '/') ? 'uploads' + window.location.pathname : 'img/dom.png';
+var imagePath = 'img/dom.png';
 for (var i = nbPictures; i >= 1; i--) {
     var img = document.createElement('img');
     img.setAttribute('src', imagePath);
@@ -55,7 +55,6 @@ function restartAnimation(e) {
  * Start the shooting stars animation
  * @param  Event  e  JS event
  */
-let test = null;
 function startAnimation(e) {
     if (animationOnGoing) return;
 
