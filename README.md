@@ -1,0 +1,27 @@
+# Shooting Stars Meme Generator
+
+A simple web application that creates a shooting stars effect with your images.
+
+## Features
+
+- Click to play animation
+- Shooting stars effect with images
+- Works directly in the browser
+- No server required
+
+## How to Use
+
+1. Simply open `index.html` in your browser
+2. Click the "Click to play :)" button to start the animation
+3. Watch as your images fly across the screen like shooting stars
+
+## Adding Your Own Images
+
+To add your own images:
+
+1. Place your images in the `public/img/` directory
+2. Add the image paths to the `images` array in `public/js/script.js`
+
+## Deployment
+
+This site is deployed using GitHub Pages. The site is available at: https://damienDemontis.github.io/Shooting-Dom/ 

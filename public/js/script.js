@@ -130,3 +130,47 @@ function startAnimation(e) {
         }).call(this, time);
     }
 }
+
+// Remove any upload-related code and make it work with static images
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('video');
+    const tapToPlay = document.getElementById('tap-to-play');
+    const picturesContainer = document.getElementById('pictures-container');
+    
+    // Predefined images array - you can add more images here
+    const images = [
+        'img/dom.png',
+        // Add more images as needed
+    ];
+    
+    let currentImageIndex = 0;
+    
+    function playVideo() {
+        video.play();
+        tapToPlay.style.display = 'none';
+        
+        // Add images with delay
+        images.forEach((image, index) => {
+            setTimeout(() => {
+                const img = document.createElement('img');
+                img.src = image;
+                img.className = 'picture';
+                picturesContainer.appendChild(img);
+                
+                // Remove image after animation
+                setTimeout(() => {
+                    img.remove();
+                }, 3000);
+            }, index * 1000);
+        });
+        
+        // Reset after video ends
+        video.addEventListener('ended', () => {
+            tapToPlay.style.display = 'block';
+            picturesContainer.innerHTML = '';
+            video.currentTime = 0;
+        });
+    }
+    
+    tapToPlay.addEventListener('click', playVideo);
+});
